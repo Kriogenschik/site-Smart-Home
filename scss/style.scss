@@ -1,0 +1,65 @@
+@import 'adaptive';
+
+@import url(../css/NullStyle.css);
+@import url(../css/fonts.css);
+@import 'vars';
+@import 'header';
+@import 'footer';
+@import 'main';
+
+body{
+   font-family:Montserrat;
+   color: $textColor;
+}
+body.lock{
+   overflow: hidden;
+}
+.wrapper{
+   background: url(../img/bg.jpg) center/cover;
+   //height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+.container{
+   max-width: $maxWidthCont;
+   margin: 0 auto;
+   padding-left: 15px;
+   padding-right: 15px;
+   z-index: 3;
+   position: relative;
+   
+}
+.title {
+   font-family: Audiowide;
+   line-height: 1;
+   text-transform: uppercase;
+   span{
+      display: block;
+      font-family: montserrat;
+      font-weight: 500;
+      line-height: 1;
+      @include adaptive-value("padding-bottom", 40, 15, 1);
+   }
+}
+.text {
+   font-family: montserrat;
+   font-weight: 500;
+   @include adaptive-value("font-size", 25, 14, 1);
+   line-height: 1.5;
+   @include adaptive-value("padding-bottom", 50, 15, 1);
+}
+.button {
+   font-family: montserrat;
+   @include adaptive-value("font-size", 27, 16, 1);
+   color: $textColor;
+   border: 1px solid $textColor;
+   border-radius: 30px;
+   padding: 5px 0;
+   @include adaptive-value("padding-left", 65, 20, 1);
+   @include adaptive-value("padding-right", 65, 20, 1);
+   transition: 0.5s;
+   &:hover{
+      border-radius: 10px;
+   }
+}

@@ -1,0 +1,593 @@
+.future {
+   &__container {
+      display: flex;
+      gap: 20px;
+      @media (max-width:550px){
+         gap:0;
+         flex-direction: column;
+   }
+   }
+   &__textblock {
+      flex: 0 0 50%;
+      @include adaptive-value("margin-top", 100, 20, 1);
+      @include adaptive-value("margin-bottom", 100, 20, 1);
+      @include adaptive-value("padding-left", 60, 20, 1);
+      @include adaptive-value("padding-right", 60, 20, 1);
+   }
+
+   &__textblock-title {
+      @include adaptive-value("font-size", 100, 30, 1);
+      span{
+         @include adaptive-value("font-size", 58, 22, 1);
+      }
+   }
+   &__img {
+      flex: 1 1 auto;
+      position: relative;
+   }
+   &__img-img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;top: 0;
+      object-fit: contain;
+   }
+   @media (max-width:550px){
+      &__img{
+         @include adaptive-value("height", 300, 250, 1);
+      }
+   }
+}
+//===========================================================================================
+.smart {
+   @include adaptive-value("margin-top", 150, 30, 1);
+   width: 100%;
+   height: 100%;
+   position: relative;
+   &__bg {
+      width: 100%;
+      min-height: 100%;
+   }
+
+   &__bg-img1 {
+      position: absolute;
+      left: 0;top: -30%;
+      width: 16.3vw;
+      height: 36.8vw;
+      object-fit: cover;
+   }
+
+   &__bg-img2 {
+      position: absolute;
+      right: 0;top: -25%;
+      width: 20.5vw;
+      height: 36.8vw;
+      object-fit: cover;
+   }
+   &__bg-img3 {
+      position: absolute;
+      right: 0;top: 32%;
+      width: 17.5vw;
+      height: 72.5vw;
+   }
+
+   &__container {
+      display: flex;
+      flex-direction: column;
+      
+   }
+
+   &__main {
+      display: flex;
+      gap: 20px;
+      @media (max-width:550px){
+         gap:0;
+         flex-direction: column-reverse;
+      }
+   }
+
+   &__img {
+      flex: 1 1 auto;
+      position: relative;
+   }
+
+   &__img-img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;top: 0;
+      object-fit: contain;
+   }
+   @media (max-width:550px){
+      &__img{
+         @include adaptive-value("height", 300, 250, 1);
+      }
+   }
+   &__textblock {
+      flex: 0 0 50%;
+      @include adaptive-value("margin-top", 100, 20, 1);
+      @include adaptive-value("margin-bottom", 100, 20, 1);
+      @include adaptive-value("padding-left", 60, 20, 1);
+      @include adaptive-value("padding-right", 60, 20, 1);
+   }
+
+   &__textblock-title {
+      @include adaptive-value("font-size", 54, 20, 1);
+      span{
+         @include adaptive-value("font-size", 36, 18, 1);
+         @include adaptive-value("padding-top", 20, 10, 1);
+      }
+   }
+
+   &__items {
+      @include adaptive-value("margin-top", 30, 10, 1);
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+      background: linear-gradient(0deg, rgba(255, 255, 255, 0.200) 0%, rgba(255, 255, 255, 0.329) 50%, rgba(255, 255, 255, 0.2) 100%);
+      border: 2px solid rgba(255, 255, 255, 0.507);
+      border-radius: 10px;
+      border-style: outset;
+      box-shadow: inset 0 0 10px 3px #bb2bb6;
+      z-index: 5;
+      @include adaptive-value("padding-top", 75, 20, 1);
+      @include adaptive-value("padding-bottom", 75, 20, 1);
+      @include adaptive-value("padding-left", 45, 10, 1);
+      @include adaptive-value("padding-right", 45, 10, 1);
+      @media(max-width:730px){
+         flex-direction: column;
+      }
+   }
+
+   &__item {
+      flex: 0 0 33%;
+      max-width: 365px;
+   }
+}
+.smart-item {
+   text-align: center;
+   &__icon {
+      position: relative;
+      @include adaptive-value("height", 180, 80, 1);
+      @include adaptive-value("width", 170, 70, 1);
+      margin: 0 auto;
+   }
+
+   &__icon-img {
+      position: absolute;
+      top: 0;left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+   }
+
+   &__title {
+      @include adaptive-value("padding-top", 65, 15, 1);
+      @include adaptive-value("font-size", 33, 18, 1);
+      font-weight: 600;
+   }
+
+   &__text {
+      line-height: 1.3;
+      @include adaptive-value("padding-top", 35, 10, 1);
+      @include adaptive-value("font-size", 20, 14, 1);
+   }
+}
+//===========================================================================================
+.security {
+   @include adaptive-value("margin-top", 110, 30, 1);
+   width: 100%;
+   height: 100%;
+   position: relative;
+   &__bg {
+      width: 100%;
+      min-height: 100%;
+   }
+   &__bg-img {
+      position: absolute;
+      left: 0;top: -35%;
+      width: 15vw;
+      height: 72vw;
+      object-fit: cover;
+   }
+   &__container{
+      text-align: center;
+   }
+   &__title{
+      font-family: Montserrat;
+      font-weight: 600;
+      @include adaptive-value("font-size", 58, 30, 1);
+      @include adaptive-value("padding-bottom", 85, 20, 1);
+   }
+   &__cards {
+      display: flex;
+      gap: 10px;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      @include adaptive-value("padding-bottom", 120, 20, 1);
+   }
+}
+.security-card {
+   flex: 1 0 33%;
+   max-width: 345px;
+   min-width: 220px;
+   background: linear-gradient(0deg, #ac43af 0%, #76099c 50%, #76099c 100%);
+   border: 2px solid rgba(255, 255, 255, 0.5);
+   border-radius: 10px;
+   border-style: outset;
+   box-shadow: inset 0 0 10px 3px #9d53b8;
+   @include adaptive-value("padding-bottom", 45, 15, 1);
+   @include adaptive-value("padding-top", 45, 15, 1);
+   @include adaptive-value("padding-left", 25, 15, 1);
+   @include adaptive-value("padding-right", 25, 15, 1);
+
+   &__img {
+      position: relative;
+      width: 100%;
+      @include adaptive-value("height", 290, 150, 1);
+      @include adaptive-value("margin-bottom", 25, 15, 1);
+   }
+
+   &__img-img {
+      position: absolute;
+      top: 0;left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+   }
+
+   &__title {
+      font-family: audiowide;
+      @include adaptive-value("font-size", 34, 18, 1);
+      @include adaptive-value("padding-bottom", 25, 15, 1);
+   }
+
+   &__text {
+      @include adaptive-value("font-size", 16, 12, 1);
+      line-height: 1.4;
+      @include adaptive-value("padding-bottom", 40, 25, 1);
+   }
+
+   &__button {
+      font-family: montserrat;
+      @include adaptive-value("font-size", 16, 12, 1);
+      color: $textColor;
+      border: 1px solid $textColor;
+      border-radius: 30px;
+      padding: 5px 0;
+      @include adaptive-value("padding-left", 30, 20, 1);
+      @include adaptive-value("padding-right", 30, 20, 1);
+      transition: 0.5s;
+      &:hover{
+      border-radius: 10px;
+      }
+   }
+}
+//===========================================================================================
+.home {
+   @include adaptive-value("margin-top", 110, 30, 1);
+   &__container {
+      display: flex;
+      gap: 20px;
+      @media (max-width:740px){
+         gap:0;
+         flex-direction: column;
+   }
+   }
+   &__img {
+      flex: 1 1 auto;
+      position: relative;
+   }
+
+   &__img-img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;top: 0;
+      object-fit: contain;
+   }
+   @media (max-width:740px){
+      &__img{
+         @include adaptive-value("height", 300, 250, 1);
+      }
+   }
+   &__textblock {
+      flex: 0 0 60%;
+      @include adaptive-value("margin-top", 100, 20, 1);
+      @include adaptive-value("margin-bottom", 100, 20, 1);
+      @include adaptive-value("padding-left", 60, 20, 1);
+      @include adaptive-value("padding-right", 60, 20, 1);
+   }
+   &__textblock-title {
+      @include adaptive-value("font-size", 80, 28, 1);
+      @include adaptive-value("padding-bottom", 85, 25, 1);
+   }
+   &__textblock-text {
+      @include adaptive-value("padding-bottom", 110, 40, 1);
+   }
+}
+//========================================================================================
+.monitor {
+   @include adaptive-value("margin-top", 150, 30, 1);
+   width: 100%;
+   height: 100%;
+   position: relative;
+   &__bg {
+      width: 100%;
+      min-height: 100%;
+   }
+   &__bg-img1 {
+      position: absolute;
+      left: 0;top: -51%;
+      width: 18.2vw;
+      height: 38vw;
+      object-fit: cover;
+   }
+   &__bg-img2 {
+      position: absolute;
+      right: 0;top: -19%;
+      width: 23vw;
+      height: 36.8vw;
+      object-fit: cover;
+   }
+   &__container {
+      display: flex;
+      gap: 20px;
+      @media (max-width:550px){
+         gap:0;
+         flex-direction: column-reverse;
+      }
+   }
+
+   &__img {
+      flex: 1 1 auto;
+      position: relative;
+   }
+
+   &__img-img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;bottom: 0;
+      object-fit: contain;
+   }
+   @media (max-width:550px){
+      &__img{
+         @include adaptive-value("height", 300, 250, 1);
+      }
+   }
+   &__textblock {
+      flex: 0 0 50%;
+   }
+
+   &__textblock-title {
+      @include adaptive-value("font-size", 58, 22, 1);
+      @include adaptive-value("padding-bottom", 100, 30, 1);
+
+   }
+
+   &__textblock-list {
+      @include adaptive-value("padding-bottom", 115, 35, 1);
+   }
+
+   &__textblock-text {
+      position: relative;
+      text-indent: 15px;
+      &::before{
+         content: '';
+         position: absolute;
+         @include adaptive-value("top", 15, 8, 1);
+         left: 0;
+         background-color: $textColor;
+         width: 5px;
+         height: 5px;
+         border-radius: 50%;
+      }
+   }
+
+   &__textblock-link {
+      display: inline-block;
+      position: relative;
+      text-align: center;
+      left: 50%;
+      transform: translateX(-50%);
+      margin: 0 auto;
+      @include adaptive-value("font-size", 38, 18, 1);
+      color: $textColor;
+      font-weight: 700;
+      font-style: italic;
+      transition: 0.3s;
+      @include adaptive-value("padding-bottom", 75, 35, 1);
+      span{
+         @include adaptive-value("font-size", 76, 28, 1);
+      }
+      &:hover{
+         text-shadow: 0 0 8px rgba(0, 0, 0, 0.425);
+      }
+   }
+}
+.monitor-download {
+text-align: center;
+   &__text {
+      text-transform: uppercase;
+      @include adaptive-value("font-size", 25, 14, 1);
+      @include adaptive-value("padding-bottom", 25, 10, 1);
+   }
+   &__links{
+      display: flex;
+      gap: 25px;
+      justify-content: center;
+   }
+   &__links-item {
+      display: inline-block;
+      @include adaptive-value("height", 70, 40, 1);
+      @include adaptive-value("width", 205, 120, 1);
+      border: 2px solid $textColor;
+      transition: 0.3s;
+      &:hover{
+         box-shadow: 0 0 8px $textColor;
+      }
+   }
+}
+//=========================================================================================
+.about {
+   @include adaptive-value("margin-top", 150, 30, 1);
+   width: 100%;
+   height: 100%;
+   position: relative;
+   &__bg {
+      width: 100%;
+      min-height: 100%;
+   }
+   &__bg-img1 {
+      position: absolute;
+      left: 0;top: -51%;
+      width: 19.6vw;
+      height: 36.8vw;
+      object-fit: cover;
+   }
+   &__container {
+      display: flex;
+      gap: 20px;
+      @media (max-width:740px){
+         gap:0;
+         flex-direction: column;
+   }
+   }
+   &__img {
+      flex: 1 1 auto;
+      position: relative;
+   }
+
+   &__img-img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;top: 0;
+      object-fit: contain;
+   }
+   @media (max-width:740px){
+      &__img{
+         @include adaptive-value("height", 300, 250, 1);
+      }
+   }
+   &__textblock {
+      flex: 0 0 50%;
+   }
+
+   &__textblock-title {
+      @include adaptive-value("font-size", 58, 22, 1);
+      @include adaptive-value("padding-bottom", 100, 30, 1);
+   }
+   &__contacts {
+      display: flex;
+      gap: 25px;
+      flex-direction: column;
+   }
+
+   &__contacts-item {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      
+
+   }
+}
+.about-item {
+   &__ico {
+      position: relative;
+      width: 33px;
+      height: 33px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+
+   &__ico-img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;left: 0;
+      object-fit: contain;
+   }
+
+   &__link {
+      color: $textColor;
+      @include adaptive-value("font-size", 23, 14, 1);
+      &:hover{
+         text-shadow: 0 0 10px rgba(0, 0, 0, 0.767)
+      }
+   }
+}
+//=================================================================================
+.check {
+   @include adaptive-value("margin-top", 150, 30, 1);
+   width: 100%;
+   height: 100%;
+   position: relative;
+   
+   &__bg {
+      width: 100%;
+      min-height: 100%;
+      z-index: 0;
+   }
+   &__bg-img1 {
+      position: absolute;
+      right: 0;top: -36%;
+      width: 41.2vw;
+      height: 51vw;
+      object-fit: cover;
+   }
+   &__container{
+      position: relative;
+      background: linear-gradient(0deg, rgba(255, 255, 255, 0.200) 0%, rgba(255, 255, 255, 0.521) 50%, rgba(255, 255, 255, 0.2) 100%);
+      border-top: 2px solid rgba(255, 255, 255, 0.507);
+      border-style: outset;
+      box-shadow: inset 0 0 10px 7px #ffffff67;
+      @include adaptive-value("padding-top", 75, 20, 1);
+      @include adaptive-value("padding-bottom", 75, 20, 1);
+      z-index: 2;
+
+   }
+   &__title {
+      text-align: center;
+      font-weight: 600;
+      @include adaptive-value("font-size", 40, 20, 1);
+   }
+
+   &__cards {
+      @include adaptive-value("margin-top", 30, 10, 1);
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+      z-index: 5;
+      @include adaptive-value("padding-top", 75, 20, 1);
+      @include adaptive-value("padding-bottom", 90, 30, 1);
+      @media(max-width:730px){
+         flex-direction: column;
+      }
+   }
+
+   &__card {
+      position: relative;
+      @include adaptive-value("width", 415, 200, 1);
+      @include adaptive-value("height", 415, 200, 1);
+      transition: 0.5s;
+      &:hover{
+         scale: 1.05;
+      }
+   }
+
+   &__card-img {
+      position: relative;
+      top: 0;left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
+}
